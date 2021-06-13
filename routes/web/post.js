@@ -33,7 +33,8 @@ router.get("/", function(req, res){
     var newPost = new Post({
         title:req.body.title,
         content:req.body.content,
-        userID:req.user._id
+        userID:req.user._id,
+        name:req.body.name
     });
 
     newPost.save(function(err,post){
